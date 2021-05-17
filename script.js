@@ -42,18 +42,21 @@ function gameTime () {
 }
 
 function grandChampionship () {
-    for (i=0; i<6; i++) {
+    for (i=0; i<5; i++) {
         gameTime();
     }
     if (compWin>humanWin) {
-        console.log(`You scored ${humanWin} points. You lost to a bot SHAME!`)
+        console.log(`You scored ${humanWin} points and the bot scored ${compWin}. You lost to a bot SHAME!`)
     }
-
+    else if (compWin==humanWin) {
+        console.log(`You scored ${humanWin} points and so did the bot. Draw Game!`)
+    }
     else {
-        console.log(`You scored ${humanWin} points. You are a winner!`)
+        console.log(`You scored ${humanWin} points and the bot scored ${compWin}. You are a winner!`)
     }
 }
 
 grandChampionship();
+alert(`Please refresh your browser to start a new tournament.`)
 
 
