@@ -22,15 +22,19 @@ function gameTime () {
         console.log('It is a draw')
     }
 
-    else if (humanMove.toLowerCase() == "rock" && saveMove.toLowerCase() == "paper") {
+    else if (humanMove.toLowerCase() == "rock" && saveMove.toLowerCase() == "paper" || humanMove.toLowerCase() == "paper" && saveMove.toLowerCase() == "scissors" || humanMove.toLowerCase() == "scissors" && saveMove.toLowerCase() == "rock") {
 
         console.log('You Lose Human');
     }
+
+    else if (humanMove.toLowerCase() !== "rock" && humanMove.toLowerCase() !== "paper" && humanMove.toLowerCase() !== "scissors") {
+        console.log(`You aint know how to play rock paper scissors. You are only allowed to use "rock" "paper" and "scissors".`);
+    }
     
     else {
-        console.log('It\'s a wip');
+        console.log('You Win Human!');
     }
-    console.log(compWin);
+    
 }
 
 gameTime();
