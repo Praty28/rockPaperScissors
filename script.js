@@ -24,7 +24,8 @@ function gameTime () {
 
     else if (humanMove.toLowerCase() == "rock" && saveMove.toLowerCase() == "paper" || humanMove.toLowerCase() == "paper" && saveMove.toLowerCase() == "scissors" || humanMove.toLowerCase() == "scissors" && saveMove.toLowerCase() == "rock") {
 
-        console.log('You Lose Human');
+        console.log('You Lose Human!');
+        compWin += 1;
     }
 
     else if (humanMove.toLowerCase() !== "rock" && humanMove.toLowerCase() !== "paper" && humanMove.toLowerCase() !== "scissors") {
@@ -33,10 +34,24 @@ function gameTime () {
     
     else {
         console.log('You Win Human!');
+        humanWin += 1;
     }
     
 }
 
-gameTime();
+function grandChampionship () {
+    for (i=0; i<6; i++) {
+        gameTime();
+    }
+    if (compWin>humanWin) {
+        console.log(`You scored ${humanWin} points. You lost to a bot SHAME!`)
+    }
+
+    else {
+        console.log(`You scored ${humanWin} points. You are a winner!`)
+    }
+}
+
+grandChampionship();
 
 
