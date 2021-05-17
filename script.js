@@ -4,6 +4,8 @@ let humanMove;
 let humanWin = 0;
 let compWin = 0;
 
+alert(`Please open your console to play a 5 round tournament of rock paper scissors against a bot.`)
+
 function rng(min, max) {
     return Math.floor(Math.random()*(max - min +1) );
 }
@@ -14,7 +16,7 @@ function computerPlay() {
 
 function gameTime () {
     computerPlay();
-    humanMove = prompt("Select your move!");
+    humanMove = prompt("Select your move! Either rock, paper or scissors.");
     
     console.log (`Comp played ${saveMove} and you played ${humanMove.slice(0,1).toUpperCase() + humanMove.slice(1).toLowerCase()}.`)
 
